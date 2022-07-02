@@ -1,0 +1,20 @@
+.sb-header-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  width: 100%;
+  
+  button {
+    color: #e7e7eb;
+    display: grid;
+    place-items: center;    
+    transition: all .3s ease-in;
+  }
+
+  @media (hover: hover) {
+    button:hover {
+      color: #e7e7e7;
+      transform: scale(1.07);
+    }
+  }
+}
