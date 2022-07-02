@@ -22,6 +22,7 @@ module.exports = {
   rules: {
     "react/prop-types": RULES.OFF,
     "react/react-in-jsx-scope": RULES.OFF,
-    quotes: RULES.OFF
+    quotes: RULES.OFF,
+    "eol-last": RULES.OFF
   }
 }

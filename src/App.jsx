@@ -1,10 +1,9 @@
+import SidebarInfo from './components/sidebar-info/SidebarInfo'
 import './App.scss'
 
 const App = () => {
   return (
-    <div>
-      <h1>MAIN</h1>
-    </div>
+    <SidebarInfo/>
   )
 }
 
