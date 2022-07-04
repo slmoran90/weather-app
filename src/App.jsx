@@ -1,9 +1,13 @@
 import SidebarInfo from './components/sidebar-info/SidebarInfo'
+import CardSection from './components/card-section/CardSection'
 import './App.scss'
 
 const App = () => {
   return (
-    <SidebarInfo/>
+    <div>
+      <SidebarInfo/>
+      <CardSection/>
+    </div>
   )
 }
 
