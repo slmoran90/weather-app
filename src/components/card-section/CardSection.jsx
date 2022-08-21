@@ -1,3 +1,4 @@
+// import { useState, useEffect } from 'react'
 import ForecastCard from './card/ForecastCard'
 import FeaturedCard from './card/FeaturedCard'
 import './cardSection.scss'
@@ -5,31 +6,26 @@ import './cardSection.scss'
 const CardSection = () => {
   const data = [
     {
-      id: 1,
       day: 'Mañana',
       maxTemp: 16,
       minTemp: 11
     },
     {
-      id: 2,
       day: 'Domingo, 7 de Junio',
       maxTemp: 16,
       minTemp: 11
     },
     {
-      id: 3,
       day: 'Lunes, 8 de Junio',
       maxTemp: 16,
       minTemp: 11
     },
     {
-      id: 4,
       day: 'Martes, 9 de Junio',
       maxTemp: 16,
       minTemp: 11
     },
     {
-      id: 5,
       day: 'Miercoles, 10 de Junio',
       maxTemp: 16,
       minTemp: 11
@@ -67,8 +63,8 @@ const CardSection = () => {
     <div className='cs-container py-5'>
       <div className='row gx-0'>
         {
-          data.map(card => (
-            <div className='col-6 justify-content-center' key={card.id}>
+          data.map((card, i) => (
+            <div className='col-6 justify-content-center' key={i}>
               <ForecastCard card={card}/>
             </div>
           ))

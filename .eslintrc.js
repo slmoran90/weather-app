@@ -23,6 +23,7 @@ module.exports = {
     "react/prop-types": RULES.OFF,
     "react/react-in-jsx-scope": RULES.OFF,
     quotes: RULES.OFF,
-    "eol-last": RULES.OFF
+    "eol-last": RULES.OFF,
+    "space-before-function-paren": RULES.OFF
   }
 }

@@ -4,16 +4,16 @@
   height: 100vh;
   width: 100%;
   overflow: hidden;
-
+  
   &__body {
     position: relative;
-    height: auto;
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    padding: 100px 0;
     
     div:first-child {
+      display: grid;
+      place-content: center;
+      
       img {
         width: 160px;
         height: 160px;
@@ -70,9 +70,7 @@
         font-size: 18px;
       }
     }
-
-
-    
+        
     &::after {
       background-image: url('../../assets/img/Cloud-background.png');
       background-position: top;
