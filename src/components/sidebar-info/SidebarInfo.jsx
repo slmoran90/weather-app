@@ -4,11 +4,11 @@ import './sidebarInfo.scss'
 
 const SidebarInfo = () => {
   return (
-    <div className='main-container'>
+    <div className='main-container container'>
       <SidebarHeader/>
       <div className='main-container__body row'>
         <div className='col-sm-12'>
-          <img src={imgWeather} alt='weather image' className='img-fluid mx-auto d-block'/>
+          <img src={imgWeather} alt='weather image' className='img-fluid' loading='lazy'/>
         </div>
         <div className='col-sm-12 temp-container'>
           <p className='temp'>

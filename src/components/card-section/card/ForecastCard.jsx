@@ -9,7 +9,7 @@ const ForecastCard = ({ card }) => {
       <div className='card-body d-flex flex-column align-items-center justify-content-between'>
         <h5 className='title'>{day}</h5>
         <div className='img-container'>
-          <img src={imgCard} alt='image temp' className='img-fluid'/>
+          <img src={imgCard} alt='image temp' className='img-fluid' loading='lazy'/>
         </div>
         <div className="card-text w-100 justify-content-around temp-min-max">
           <p>{maxTemp}°C</p>

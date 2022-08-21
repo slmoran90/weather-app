@@ -5,4 +5,9 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Raleway', sans-serif;
+  scroll-behavior: smooth;
+}
+
+.app-container {
+  background: linear-gradient(90deg, #0971bb 50%, #0093E9 100%);
 }
