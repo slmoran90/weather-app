@@ -24,6 +24,7 @@ module.exports = {
     "react/react-in-jsx-scope": RULES.OFF,
     quotes: RULES.OFF,
     "eol-last": RULES.OFF,
-    "space-before-function-paren": RULES.OFF
+    "space-before-function-paren": RULES.OFF,
+    camelcase: RULES.OFF
   }
 }

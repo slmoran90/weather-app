@@ -1,4 +1,3 @@
-/* eslint-disable camelcase */
 const OPTIONS_FETCH = {
   method: "GET",
   headers: {
@@ -7,9 +6,9 @@ const OPTIONS_FETCH = {
   }
 }
 
-export async function getData(query) {
+export async function fetchData(query) {
   const data = await fetch(
-    `https://weatherapi-com.p.rapidapi.com/forecast.json?q=${query}`,
+    `https://weatherapi-com.p.rapidapi.com/forecast.json?q=${query}&lang=es`,
     OPTIONS_FETCH
   )
 
