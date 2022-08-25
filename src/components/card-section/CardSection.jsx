@@ -3,59 +3,29 @@ import ForecastCard from './card/ForecastCard'
 import FeaturedCard from './card/FeaturedCard'
 import './cardSection.scss'
 
-const CardSection = () => {
-  const data = [
-    {
-      day: 'Mañana',
-      maxTemp: 16,
-      minTemp: 11
-    },
-    {
-      day: 'Domingo, 7 de Junio',
-      maxTemp: 16,
-      minTemp: 11
-    },
-    {
-      day: 'Lunes, 8 de Junio',
-      maxTemp: 16,
-      minTemp: 11
-    },
-    {
-      day: 'Martes, 9 de Junio',
-      maxTemp: 16,
-      minTemp: 11
-    },
-    {
-      day: 'Miercoles, 10 de Junio',
-      maxTemp: 16,
-      minTemp: 11
-    }
-  ]
+const CardSection = ({ data }) => {
+  const { forecastday, localtime, wind_kph, humidity, vis_km, pressure_mb } = data
 
-  const status = [
+  const hl = [
     {
-      windStatus: {
-        title: 'estado del viento',
-        value: 7
-      }
+      title: 'estado del vieto',
+      label: 'windStatus',
+      value: wind_kph
     },
     {
-      humidity: {
-        title: 'humedad',
-        value: 84
-      }
+      title: 'humedad',
+      label: 'humidity',
+      value: humidity
     },
     {
-      visibility: {
-        title: 'visibilidad',
-        value: 6.4
-      }
+      title: 'visibilidad',
+      label: 'visibility',
+      value: vis_km
     },
     {
-      airPresure: {
-        title: 'presión',
-        value: 998
-      }
+      title: 'presión',
+      label: 'airPresure',
+      value: pressure_mb
     }
   ]
 
@@ -63,9 +33,9 @@ const CardSection = () => {
     <div className='cs-container py-5'>
       <div className='row gx-0'>
         {
-          data.map((card, i) => (
+          forecastday?.map((forecastData, i) => (
             <div className='col-6 justify-content-center' key={i}>
-              <ForecastCard card={card}/>
+              <ForecastCard forecastData={forecastData} localtime={localtime}/>
             </div>
           ))
         }
@@ -74,9 +44,9 @@ const CardSection = () => {
         <h5 className='highlights__title py-3'>Destacados de hoy</h5>
         <div className="row gx-0">
           {
-            status.map((cardStatus, i) => (
+            hl.map((data, i) => (
               <div className="col-12 justify-content-center" key={i}>
-                <FeaturedCard cardStatus={cardStatus}/>
+                <FeaturedCard data={data}/>
               </div>
             ))
           }

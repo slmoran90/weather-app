@@ -7,7 +7,6 @@ import './App.scss'
 const App = () => {
   const [data, setData] = useState({})
   const [location, setLocation] = useState()
-  // const { latitude, longitude } = location
 
   const query = location ? `${location.latitude}, ${location.longitude}` : 'san miguel de tucuman'
 

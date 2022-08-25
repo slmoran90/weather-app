@@ -17,11 +17,12 @@
   }
 
   .temp-min-max {
+    gap: 10px;
     p {
       font-size: 16px;
       font-weight: 500;
 
-      &:last-child {
+      &:first-child {
         color: #a09fb1;
       }
     }
