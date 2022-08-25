@@ -8,7 +8,7 @@
 
 export async function fetchData(query) {
   const data = await fetch(
-    `http://api.weatherapi.com/v1/forecast.json?key=d28988cda62540088b2202108222408&q=${query}&days=5&lang=es`
+    `https://api.weatherapi.com/v1/forecast.json?key=d28988cda62540088b2202108222408&q=${query}&days=5&lang=es`
     // OPTIONS_FETCH
   )
 
