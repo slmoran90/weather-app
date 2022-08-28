@@ -1,6 +1,8 @@
 // import { useState, useEffect } from 'react'
 import ForecastCard from './card/ForecastCard'
 import FeaturedCard from './card/FeaturedCard'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 import './cardSection.scss'
 
 const CardSection = ({ data }) => {
@@ -29,12 +31,20 @@ const CardSection = ({ data }) => {
     }
   ]
 
+  AOS.init()
+
   return (
     <div className='cs-container py-5'>
       <div className='row gx-0'>
         {
           forecastday?.map((forecastData, i) => (
-            <div className='col-6 justify-content-center' key={i}>
+            <div
+              className='col-6 justify-content-center'
+              key={i}
+              data-aos={i % 2 === 0 ? 'zoom-out-right' : 'zoom-out-left'}
+              data-aos-duration="450"
+              data-aos-delay={i % 2 === 0 ? '50' : '150'}
+            >
               <ForecastCard forecastData={forecastData} localtime={localtime}/>
             </div>
           ))
@@ -45,7 +55,14 @@ const CardSection = ({ data }) => {
         <div className="row gx-0">
           {
             hl.map((data, i) => (
-              <div className="col-12 justify-content-center" key={i}>
+              <div
+                className="col-12 justify-content-center"
+                key={i}
+                data-aos="zoom-in-up"
+                data-aos-anchor-placement="top-bottom"
+                data-aos-duration="600"
+                data-aos-delay="200"
+              >
                 <FeaturedCard data={data}/>
               </div>
             ))
