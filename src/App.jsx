@@ -8,7 +8,7 @@ const App = () => {
   const [data, setData] = useState({})
   const [location, setLocation] = useState()
 
-  const query = location ? `${location.latitude}, ${location.longitude}` : 'san miguel de tucuman'
+  const query = location ? `${location.latitude}, ${location.longitude}` : 'argentina'
 
   const fetch = async () => {
     const res = await fetchData(query)
