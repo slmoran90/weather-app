@@ -9,7 +9,7 @@ const ForecastCard = ({ forecastData, localtime }) => {
   const d = getDate(date)
   const dateNow = getDate(localtime)
 
-  const getWeek = () => d.day === dateNow.day ? 'Hoy' : d.day === (dateNow.day + 1) ? 'Mañana' : d.week
+  const getWeek = () => d.day === dateNow.day ? 'Hoy' : d.day === (dateNow.day + 1) ? 'Mañana' : `${d.week}, ${d.day} de ${d.month}`
 
   const week = getWeek()
 
