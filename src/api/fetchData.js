@@ -7,8 +7,10 @@
 // }
 
 export async function fetchData(query) {
+  const { VITE_APP_KEY, VITE_BASE_URL } = import.meta.env
+
   const data = await fetch(
-    `https://api.weatherapi.com/v1/forecast.json?key=d28988cda62540088b2202108222408&q=${query}&days=5&lang=es`
+    `${VITE_BASE_URL}?key=${VITE_APP_KEY}&q=${query}&days=5&lang=es`
     // OPTIONS_FETCH
   )
 
