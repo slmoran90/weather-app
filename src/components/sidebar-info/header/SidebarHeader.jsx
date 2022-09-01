@@ -1,6 +1,10 @@
+import { useContext } from 'react'
+import { ForecastContext } from '../../../context/forecastContext'
 import './header.scss'
 
-const SidebarHeader = ({ setLocation }) => {
+const SidebarHeader = () => {
+  const { setLocation } = useContext(ForecastContext)
+
   const getLocation = () => {
     const { geolocation } = navigator
 
