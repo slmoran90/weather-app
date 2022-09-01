@@ -1,16 +1,19 @@
+import { useContext } from 'react'
+import { ForecastContext } from '../../context/forecastContext'
 import SidebarHeader from './header/SidebarHeader'
 import { getDate } from '../../helper/getDate'
 import './sidebarInfo.scss'
 
-const SidebarInfo = ({ data, setData, setLocation }) => {
-  const { name, temp_c, condition, localtime, region } = data
+const SidebarInfo = () => {
+  const { forecast } = useContext(ForecastContext)
+  const { name, temp_c, condition, localtime, region } = forecast
 
   const date = getDate(localtime)
   const { week, day, month } = date
 
   return (
     <div className='main-container container'>
-      <SidebarHeader setLocation={setLocation}/>
+      <SidebarHeader/>
       <div className='main-container__body row'>
         <div className='col-sm-12'>
           <img src={condition?.icon} alt='weather image' className='img-fluid mt-3' loading='lazy'/>

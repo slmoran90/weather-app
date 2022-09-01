@@ -1,12 +1,15 @@
 // import { useState, useEffect } from 'react'
+import { useContext } from 'react'
+import { ForecastContext } from '../../context/forecastContext'
 import ForecastCard from './card/ForecastCard'
 import FeaturedCard from './card/FeaturedCard'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import './cardSection.scss'
 
-const CardSection = ({ data }) => {
-  const { forecastday, localtime, wind_kph, humidity, vis_km, pressure_mb } = data
+const CardSection = () => {
+  const { forecast } = useContext(ForecastContext)
+  const { forecastday, localtime, wind_kph, humidity, vis_km, pressure_mb } = forecast
 
   const hl = [
     {
