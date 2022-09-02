@@ -5,13 +5,11 @@ export const ForecastContext = createContext()
 
 const ForecastProvider = ({ children }) => {
   const [forecast, setForecast] = useState({})
-  const [location, setLocation] = useState()
-
-  const query = location ? `${location.latitude}, ${location.longitude}` : 'argentina'
+  const [location, setLocation] = useState('argentina')
 
   const getdata = async () => {
     try {
-      const data = await fetchData(query)
+      const data = await fetchData(location)
       return setForecast(data)
     } catch (error) {
       console.log(error)
