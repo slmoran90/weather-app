@@ -37,12 +37,12 @@ const CardSection = () => {
   AOS.init()
 
   return (
-    <div className='cs-container py-5'>
-      <div className='row gx-0'>
+    <div className='pb-2 min-vh-100 cs-container col-12 col-md-8 row gx-0'>
+      <div className='gap-5 py-5 row gx-0 d-flex justify-content-start justify-content-md-center'>
         {
           forecastday?.map((forecastData, i) => (
             <div
-              className='col-6 justify-content-center'
+              className={`col-5 col-md-1 d-flex justify-content-center`}
               key={i}
               data-aos={i % 2 === 0 ? 'zoom-out-right' : 'zoom-out-left'}
               data-aos-duration="450"
@@ -53,13 +53,13 @@ const CardSection = () => {
           ))
         }
       </div>
-      <div className='highlights mt-5'>
-        <h5 className='highlights__title py-3'>Destacados de hoy</h5>
-        <div className="row gx-0">
+      <div className='mt-5 highlights'>
+        <h5 className='py-3 w-100 w-md-25 highlights__title'>Destacados de hoy</h5>
+        <div className="gap-5 row gx-0 w-100">
           {
             hl.map((data, i) => (
               <div
-                className="col-12 justify-content-center"
+                className="col-md-5 col-12 d-flex justify-content-center"
                 key={i}
                 data-aos="zoom-in-up"
                 data-aos-anchor-placement="top-bottom"

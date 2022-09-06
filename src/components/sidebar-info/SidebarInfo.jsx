@@ -12,11 +12,11 @@ const SidebarInfo = () => {
   const { week, day, month } = date
 
   return (
-    <div className='main-container container'>
+    <div className='main-container col-12 col-md-4 w-md-100'>
       <SidebarHeader/>
       <div className='main-container__body row'>
         <div className='col-sm-12'>
-          <img src={condition?.icon} alt='weather image' className='img-fluid mt-3' loading='lazy'/>
+          <img src={condition?.icon} alt='weather image' className='mt-3 img-fluid' loading='lazy'/>
         </div>
         <div className='col-sm-12 temp-container'>
           <p className='temp'>
