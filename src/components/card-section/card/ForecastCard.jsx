@@ -20,7 +20,7 @@ const ForecastCard = ({ forecastData, localtime }) => {
         <div className='img-container'>
           <img src={condition?.icon} alt='image temp' className='img-fluid' loading='lazy'/>
         </div>
-        <div className="card-text w-100 justify-content-around temp-min-max">
+        <div className="card-text w-100 d-flex justify-content-around temp-min-max">
           <p>{mintemp_c}°C</p>
           <p>{maxtemp_c}°C</p>
         </div>

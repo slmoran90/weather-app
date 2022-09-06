@@ -5,7 +5,7 @@ import './App.scss'
 
 const App = () => {
   return (
-    <div className='app-container'>
+    <div className='row w-100 gx-0 min-vh-100'>
       <ForecastProvider>
         <SidebarInfo/>
         <CardSection/>
