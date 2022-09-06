@@ -14,7 +14,7 @@ const SidebarInfo = () => {
   return (
     <div className='main-container col-12 col-md-4 w-md-100'>
       <SidebarHeader/>
-      <div className='main-container__body row'>
+      <div className='main-container__body row position-relative'>
         <div className='col-sm-12'>
           <img src={condition?.icon} alt='weather image' className='mt-3 img-fluid' loading='lazy'/>
         </div>
@@ -34,6 +34,7 @@ const SidebarInfo = () => {
             {name} - {region}
           </p>
         </div>
+          <div className="main-background"/>
       </div>
     </div>
   )
