@@ -9,7 +9,7 @@ const FeaturedCard = ({ data }) => {
     >
       <div className='card-body d-flex flex-column align-items-center justify-content-between'>
         <h5 className='title text-capitalize'>{title}</h5>
-        <div className='card-text w-100 justify-content-center flex-column align-items-center'>
+        <div className='card-text w-100 d-flex justify-content-center flex-column align-items-center'>
             <p className='status-value'>
               {value}
               <span>
