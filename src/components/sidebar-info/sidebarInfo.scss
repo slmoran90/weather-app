@@ -70,21 +70,25 @@
         gap: 10px;
         font-weight: 600;
         font-size: 18px;
+
+        @media screen and (max-width: 767px) {
+          gap: 0;
+          padding: 0 65px;
+        }
       }
-    }
-        
-    &::after {
-      background-image: url('../../assets/img/Cloud-background.png');
-      background-position: top;
-      background-repeat: no-repeat;
-      background-size: 150%;
-      content: '';
-      filter: opacity(20%);
-      height: 100%;
-      left: 0;
-      position: absolute;
-      top: 0;
-      width: 100%;
-    }
+    }     
+  }
+  
+  .main-background {
+    background-image: url('../../assets/img/Cloud-background.png');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 150%;
+    filter: opacity(20%);
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
   }
 }
