@@ -8,7 +8,7 @@ import 'aos/dist/aos.css'
 import './cardSection.scss'
 
 const CardSection = () => {
-  const { forecast, loading } = useContext(ForecastContext)
+  const { forecast } = useContext(ForecastContext)
   const { forecastday, localtime, wind_kph, humidity, vis_km, pressure_mb } = forecast
 
   const hl = [
@@ -34,32 +34,26 @@ const CardSection = () => {
     }
   ]
 
-  const load =
-    <div className="spinner-grow spinner-grow-sm text-light d-none d-md-block" role="status">
-      <span className="visually-hidden">Loading...</span>
-    </div>
-
   AOS.init()
 
   return (
     <div className='pb-2 min-vh-100 cs-container col-12 col-md-8 row gx-0'>
       <div className='gap-5 py-5 row gx-0 d-flex justify-content-start justify-content-md-center'>
         {
-          loading
-            ? (load)
-            : forecastday?.map((forecastData, i) => {
-              return (
-              <div
-                className={`col-5 col-md-1 d-flex justify-content-center`}
-                key={i}
-                data-aos={i % 2 === 0 ? 'zoom-out-right' : 'zoom-out-left'}
-                data-aos-duration="450"
-                data-aos-delay={i % 2 === 0 ? '50' : '150'}
-              >
-                <ForecastCard forecastData={forecastData} localtime={localtime}/>
-              </div>
-              )
-            })
+          forecastday?.map((forecastData, i) => {
+            return (
+            <div
+              className={`col-5 col-md-1 d-flex justify-content-center`}
+              style={{ width: 'fit-content' }}
+              key={i}
+              data-aos={i % 2 === 0 ? 'zoom-out-right' : 'zoom-out-left'}
+              data-aos-duration="450"
+              data-aos-delay={i % 2 === 0 ? '50' : '150'}
+            >
+              <ForecastCard forecastData={forecastData} localtime={localtime}/>
+            </div>
+            )
+          })
         }
       </div>
       <div className='mt-5 highlights'>
