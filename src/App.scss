@@ -9,5 +9,9 @@
 }
 
 .app-container {
-  background: linear-gradient(90deg, #0971bb 50%, #0093E9 100%);
+  background: linear-gradient(160deg, rgba(30, 35, 81, 1) 50%, #0093E9 100%);
+  
+  @media screen and (max-width: 767px) {
+    background: linear-gradient(90deg, #0971bb 50%, #0093E9 100%);
+  }
 }
