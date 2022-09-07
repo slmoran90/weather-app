@@ -11,8 +11,6 @@ const CardSection = () => {
   const { forecast, loading } = useContext(ForecastContext)
   const { forecastday, localtime, wind_kph, humidity, vis_km, pressure_mb } = forecast
 
-  console.log('loading', loading)
-
   const hl = [
     {
       title: 'estado del vieto',
