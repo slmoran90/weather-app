@@ -38,12 +38,12 @@ const CardSection = () => {
 
   return (
     <div className='pb-2 min-vh-100 cs-container col-12 col-md-8 row gx-0'>
-      <div className='gap-5 py-5 row gx-0 d-flex justify-content-start justify-content-md-center'>
+      <div className='py-5 gap-4 gap-md-5 row gx-0 d-flex justify-content-center'>
         {
           forecastday?.map((forecastData, i) => {
             return (
             <div
-              className={`col-5 col-md-1 d-flex justify-content-center`}
+              className={`${i === 2 ? 'col-9 col-md-1 d-flex justify-content-center' : 'col-5 col-md-1 d-flex justify-content-center'}`}
               style={{ width: 'fit-content' }}
               key={i}
               data-aos={i % 2 === 0 ? 'zoom-out-right' : 'zoom-out-left'}

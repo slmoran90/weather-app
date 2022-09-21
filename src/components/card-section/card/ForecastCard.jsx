@@ -14,7 +14,7 @@ const ForecastCard = ({ forecastData, localtime }) => {
   const week = getWeek()
 
   return (
-    <div className='card-container card' style={{ width: '120px', height: '180px' }}>
+    <div className='card-container card' style={{ width: '135px', height: '180px' }}>
       <div className='card-body d-flex flex-column align-items-center justify-content-between'>
         <h5 className='title'>{week}</h5>
         <div className='img-container'>
